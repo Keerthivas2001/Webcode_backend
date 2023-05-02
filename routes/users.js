@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const{UserModel}=require('../schemas/userSchema')
+const{Userclient}=require('../schemas/newClients')
 const mongoose=require('mongoose')
 const {dbUrl}=require('../common/dbConfig')
 mongoose.connect(dbUrl)
@@ -47,6 +48,8 @@ else{
     })
   }
 })
+
+
 
 
 router.post('/login',async (req,res)=>{
